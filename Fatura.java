@@ -62,14 +62,14 @@ public class Fatura {
 		System.out.println("O valor da fatura era "+ getValorFatura());
 		this.setValorFatura(getValorFatura()-boleto);
 		verificaDivida();
-		System.out.println("O valor da fatura agora È: "+ getValorFatura());
+		System.out.println("O valor da fatura agora √©: "+ getValorFatura());
 		if (this.pago == true) {
 			
-			System.out.println("A fatura est· paga");
+			System.out.println("A fatura est√° paga");
 			
 		}else {
 			
-			System.out.println("A fatura n„o est· paga");
+			System.out.println("A fatura n√£o est√° paga");
 			
 		}
 		
@@ -89,7 +89,17 @@ public class Fatura {
 		
 	}
 	
+	public boolean getPago() {
+		
+		return this.pago;
+		
+	}
 	
+	public void setPago(boolean pagamento) {
+		
+		this.pago = pagamento;
+		
+	}
 	
 	
 	
