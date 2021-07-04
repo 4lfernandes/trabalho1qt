@@ -6,7 +6,7 @@ public class Fatura {
 	
 	private String dataFatura, nomeCliente;
 	private double valorFatura;
-	public boolean pago;
+	public boolean pago = false;
 	
 	//construtor
 	
@@ -56,34 +56,11 @@ public class Fatura {
 		
 	}
 	
-	/*public void pagamento(Boleto bol) {
-		
-		double boleto = bol.getValorPago();
-		System.out.println("O valor da fatura era "+ getValorFatura());
-		this.setValorFatura(getValorFatura()-boleto);
-		verificaDivida();
-		System.out.println("O valor da fatura agora é: "+ getValorFatura());
-		if (this.pago == true) {
-			
-			System.out.println("A fatura está paga");
-			
-		}else {
-			
-			System.out.println("A fatura não está paga");
-			
-		}
-		
-	}*/
-	
 	public void verificaDivida() {
 		
-		if (getValorFatura()>0) {
+		if (getValorFatura()<=0) {
 			
-			this.pago = false;
-			
-		}else {
-			
-			this.pago = true;
+			this.setPago(true);
 			
 		}
 		
@@ -100,11 +77,5 @@ public class Fatura {
 		this.pago = pagamento;
 		
 	}
-	
-	
-	
-	
-	
-	
 	
 }
